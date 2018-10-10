@@ -6,6 +6,4 @@ PIN_R = 12
 GPIO.setmode(GPIO.BOARD)       # Numbers GPIOs by physical pin location
 GPIO.setup(PIN_R, GPIO.OUT)   # Set the physical pin 12 to mode is output
 
-
-while True:
-    GPIO.output(PIN_R, GPIO.HIGH)  # Set the R pin to High(3.3V) to turn on led
+GPIO.output(PIN_R, GPIO.HIGH)  # Set the R pin to High(3.3V) to turn on led
