@@ -19,7 +19,7 @@ print ("The frequency is ", Signal_Frequency) # Print out the current Frequency
 print ("The LED ")
 
 while True:
-    PWM_Pin.Start(Signal_Duty_Cycle)    # Start the pwm on the designated pin with a set duty cycle
+    PWM_Pin.start(Signal_Duty_Cycle)    # Start the pwm on the designated pin with a set duty cycle
     
 print ("End of program")
 
