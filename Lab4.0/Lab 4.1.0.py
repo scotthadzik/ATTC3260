@@ -3,7 +3,7 @@ import RPi.GPIO as GPIO
 import time
 
 # colors = [0xFF0000, 0x00FF00, 0x0000FF, 0xFFFF00, 0xFF00FF, 0x00FFFF]
-PIN_R = 11
+PIN_R = 12
 
 Signal_Frequency = 2000 # The frequency of the digital signal
 Signal_Duty_Cycle = 50 # The duty cycle of the digital signal. This is the on-time
