@@ -6,7 +6,7 @@ import time
 PIN_R = 11
 
 Signal_Frequency = 100 # The frequency of the digital signal
-Signal_Duty_Cycle = 0 # The duty cycle of the digital signal. This is the on-time
+Signal_Duty_Cycle = 50 # The duty cycle of the digital signal. This is the on-time
 
 GPIO.setmode(GPIO.BOARD) # Numbers GPIOs by physical location
 GPIO.setup(PIN_R, GPIO.OUT, initial=GPIO.LOW) # Set the R pin to mode is output
