@@ -4,23 +4,18 @@ import time
 
 # colors = [0xFF0000, 0x00FF00, 0x0000FF, 0xFFFF00, 0xFF00FF, 0x00FFFF]
 PIN_R = 11
-PIN_G = 12
-PIN_B = 13
 
 Signal_Frequency = 100 # The frequency of the digital signal
 Signal_Duty_Cycle = 100 # The duty cycle of the digital signal. This is the on-time
 
 GPIO.setmode(GPIO.BOARD) # Numbers GPIOs by physical location
 GPIO.setup(PIN_R, GPIO.OUT) # Set the R pin to mode is output
-GPIO.setup(PIN_G, GPIO.OUT) # Set the G pin to mode is output
-GPIO.setup(PIN_B, GPIO.OUT) # Set the B pin to mode is output
 
 PWM_R_Pin = GPIO.PWM(PIN_R, Signal_Frequency) # Set the pin to a pulse width modulation digital signal with a set frequency
 
 
 while True:
     PWM_R_Pin.start(Signal_Duty_Cycle)    # Start the pwm on the designated pin with a set duty cycle
-
 
 print ("End of program")
 
