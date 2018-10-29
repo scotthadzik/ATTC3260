@@ -41,7 +41,7 @@ Red_Signal_Frequency   = 2000 # The frequency of the digital signal
 Green_Signal_Frequency = 2000 # The frequency of the digital signal
 Blue_Signal_Frequency  = 2000 # The frequency of the digital signal
 
-PWM_R_Pin = GPIO.PWM(PIN1_R, Red_Signal_Frequency)   # Set the pin to a pulse width modulation digital signal with a set frequency
+PWM_R_Pin = GPIO.PWM(PIN_R, Red_Signal_Frequency)   # Set the pin to a pulse width modulation digital signal with a set frequency
 PWM_G_Pin = GPIO.PWM(PIN_G, Green_Signal_Frequency) # Set the pin to a pulse width modulation digital signal with a set frequency
 PWM_B_Pin = GPIO.PWM(PIN_B, Blue_Signal_Frequency)  # Set the pin to a pulse width modulation digital signal with a set frequency
 
