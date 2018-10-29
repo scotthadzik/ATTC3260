@@ -42,14 +42,14 @@ PWM_G_Pin = GPIO.PWM(PIN_G, Green_Signal_Frequency) # Set the pin to a pulse wid
 PWM_B_Pin = GPIO.PWM(PIN_B, Blue_Signal_Frequency)  # Set the pin to a pulse width modulation digital signal with a set frequency
 
 print ("Set R to " + str(Red_Signal_Duty_Cycle * (colorOptions))  + ' With a duty cyle of ' + str(Red_Signal_Duty_Cycle   * 100))
-print ("Set G to " + str(Green_Signal_Duty_Cycle * (colorOptions))+ ' With a duty cyle of ' + str(Blue_Signal_Duty_Cycle  * 100))
-print ("Set B to " + str(Blue_Signal_Duty_Cycle * (colorOptions)) + ' With a duty cyle of ' + str(Green_Signal_Duty_Cycle * 100))
+print ("Set G to " + str(Green_Signal_Duty_Cycle * (colorOptions))+ ' With a duty cyle of ' + str(Green_Signal_Duty_Cycle  * 100))
+print ("Set B to " + str(Blue_Signal_Duty_Cycle * (colorOptions)) + ' With a duty cyle of ' + str(Blue_Signal_Duty_Cycle * 100))
 
 while True:
     try: # runs until Ctrl+C interupts
         PWM_R_Pin.start(Red_Signal_Duty_Cycle)   # Start the pwm on the designated pin with a set duty cycle
-        PWM_G_Pin.start(Blue_Signal_Duty_Cycle)  # Start the pwm on the designated pin with a set duty cycle
-        PWM_B_Pin.start(Green_Signal_Duty_Cycle) # Start the pwm on the designated pin with a set duty cycle
+        PWM_G_Pin.start(Green_Signal_Duty_Cycle)  # Start the pwm on the designated pin with a set duty cycle
+        PWM_B_Pin.start(Blue_Signal_Duty_Cycle) # Start the pwm on the designated pin with a set duty cycle
 
     except KeyboardInterrupt: # runs when Ctrl+C interupts
         break
