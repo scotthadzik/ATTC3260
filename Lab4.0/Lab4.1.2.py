@@ -17,14 +17,14 @@ setRedColor   = 73
 setGreenColor = 35
 setBlueColor  = 101
 
-redColorOFFTime   = setRedColor  / redColorDefault
-greenColorOFFTime = setGreenColor/ greenColorDefault
-blueColorOFFTime  = setBlueColor / blueColorDefault
+redColorOFFTime   = (setRedColor  / redColorDefault)   *100
+greenColorOFFTime = (setGreenColor/ greenColorDefault) *100
+blueColorOFFTime  = (setBlueColor / blueColorDefault)  *100
 
 #------------------SET THE DUTY CYCLE -----------------------------------------------------
-Red_Signal_Duty_Cycle   = 100 - redColorDefault   # The duty cycle of the digital signal. This is the on-time
-Green_Signal_Duty_Cycle = 100 - greenColorDefault # The duty cycle of the digital signal. This is the on-time
-Blue_Signal_Duty_Cycle  = 100 - blueColorDefault  # The duty cycle of the digital signal. This is the on-time
+Red_Signal_Duty_Cycle   = 100 - redColorOFFTime   # The duty cycle of the digital signal. This is the on-time
+Green_Signal_Duty_Cycle = 100 - greenColorOFFTime # The duty cycle of the digital signal. This is the on-time
+Blue_Signal_Duty_Cycle  = 100 - blueColorOFFTime  # The duty cycle of the digital signal. This is the on-time
 
 #------------------SET PIN to OUTPUT -----------------------------------------------------
 GPIO.setup(PIN_R, GPIO.OUT) # Set the R pin to mode is output
