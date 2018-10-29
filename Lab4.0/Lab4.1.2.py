@@ -28,9 +28,9 @@ GPIO.setup(PIN_G, GPIO.OUT) # Set the G pin to mode is output
 GPIO.setup(PIN_B, GPIO.OUT) # Set the B pin to mode is output
 
 #------------------Turn pin HIGH so that LED is off -----------------------------------------------------
-GPIO.output (PIN_R, GPIO.HIGH) # Turn off the LED
-GPIO.output (PIN_G, GPIO.HIGH) # Turn off the LED
-GPIO.output (PIN_B, GPIO.HIGH) # Turn off the LED
+# GPIO.output (PIN_R, GPIO.HIGH) # Turn off the LED
+# GPIO.output (PIN_G, GPIO.HIGH) # Turn off the LED
+# GPIO.output (PIN_B, GPIO.HIGH) # Turn off the LED
 
 # ------------------SET THE FREQUENCY -----------------------------------------------------
 Red_Signal_Frequency   = 2000 # The frequency of the digital signal
