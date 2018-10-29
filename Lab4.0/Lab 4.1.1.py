@@ -25,4 +25,5 @@ while True:
         PWM_R_Pin.start(Red_Signal_Duty_Cycle)    # Start the pwm on the designated pin with a set duty cycle
     except KeyboardInterrupt: # runs when Ctrl+C interupts
 	    print ("End of program")
-        GPIO.cleanup() # this ensures a clean exit
+        
+GPIO.cleanup() # this ensures a clean exit
