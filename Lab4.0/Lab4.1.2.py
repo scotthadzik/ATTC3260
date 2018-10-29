@@ -45,9 +45,9 @@ PWM_R_Pin = GPIO.PWM(PIN_R, Red_Signal_Frequency)   # Set the pin to a pulse wid
 PWM_G_Pin = GPIO.PWM(PIN_G, Green_Signal_Frequency) # Set the pin to a pulse width modulation digital signal with a set frequency
 PWM_B_Pin = GPIO.PWM(PIN_B, Blue_Signal_Frequency)  # Set the pin to a pulse width modulation digital signal with a set frequency
 
-print ("Set R to " + str(setRedColor)  + ' With a duty cyle of ' + str(Red_Signal_Duty_Cycle)  + ' OFF time ' + str(redColorOFFTime * 100))
-print ("Set G to " + str(setGreenColor)+ ' With a duty cyle of ' + str(Green_Signal_Duty_Cycle)+ ' OFF time' + str(redColorOFFTime  * 100))
-print ("Set B to " + str(setBlueColor) + ' With a duty cyle of ' + str(Blue_Signal_Duty_Cycle) + ' OFF time' + str(redColorOFFTime  * 100))
+print ("Set R to " + str(setRedColor)  + ' With a duty cyle of ' + str(Red_Signal_Duty_Cycle)  + ' OFF time ' + str(redColorOFFTime))
+print ("Set G to " + str(setGreenColor)+ ' With a duty cyle of ' + str(Green_Signal_Duty_Cycle)+ ' OFF time' + str(greenColorOFFTime ))
+print ("Set B to " + str(setBlueColor) + ' With a duty cyle of ' + str(Blue_Signal_Duty_Cycle) + ' OFF time' + str(blueColorOFFTime ))
 
 while True:
     try: # runs until Ctrl+C interupts
