@@ -47,7 +47,7 @@ print ("Set B to " + str(Blue_Signal_Duty_Cycle * (colorOptions)) + ' With a dut
 
 while True:
     try: # runs until Ctrl+C interupts
-        PWM_R_Pin.start(Red_Signal_Duty_Cycle)   # Start the pwm on the designated pin with a set duty cycle
+        PWM_R_Pin.start(29)   # Start the pwm on the designated pin with a set duty cycle
         PWM_G_Pin.start(Green_Signal_Duty_Cycle)  # Start the pwm on the designated pin with a set duty cycle
         PWM_B_Pin.start(Blue_Signal_Duty_Cycle) # Start the pwm on the designated pin with a set duty cycle
 
