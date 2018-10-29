@@ -14,8 +14,8 @@ blueColorDefault  = colorOptions
 greenColorDefault = colorOptions
 
 setRedColor   = 73 
-setBlueColor  = 35
-setGreenColor = 101
+setGreenColor = 35
+setBlueColor  = 101
 
 #------------------SET THE DUTY CYCLE -----------------------------------------------------
 Red_Signal_Duty_Cycle   = setRedColor / redColorDefault     # The duty cycle of the digital signal. This is the on-time
