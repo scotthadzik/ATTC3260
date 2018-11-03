@@ -4,7 +4,6 @@ import time
 
 PIN_R = 11
 colorOptions = 256 # The number of colors available in an 8 bit number
-redColorDefault   = colorOptions
 # ------------------SET THE FREQUENCY -----------------------------------------------------
 Red_Signal_Frequency   = 2000 # The frequency of the digital signal
 
@@ -12,7 +11,7 @@ Red_Signal_Frequency   = 2000 # The frequency of the digital signal
 setRedColor = 25 
 
 #------------------SET THE DUTY CYCLE -----------------------------------------------------
-redColorOFFTime   = (setRedColor  / redColorDefault) * 100 # Calculate the off time by dividing the setColor by 256. 
+redColorOFFTime   = (setRedColor  / colorOptions) * 100 # Calculate the off time by dividing the setColor by 256. 
 Red_Signal_Duty_Cycle   = 100 - redColorOFFTime   # The duty cycle of the digital signal. This is the on-time
 
 #------------------SET PIN to OUTPUT -----------------------------------------------------
@@ -22,7 +21,9 @@ GPIO.output (PIN_R, GPIO.HIGH) # Turn off the LED
 
 PWM_R_Pin = GPIO.PWM(PIN_R, Red_Signal_Frequency)   # Set the pin to a pulse width modulation digital signal with a set frequency
 
-print ("Set R to " + str(colorOptions * (redColorOFFTime / 100))  + ' With a duty cyle of ' + str(Red_Signal_Duty_Cycle)  + ' OFF time ' + str(redColorOFFTime))
+print ("Set R to " + str(setRedColor)  + 
+        ' With a duty cyle of ' + str(Red_Signal_Duty_Cycle)  + 
+        ' OFF time ' + str(redColorOFFTime))
 
 while True:
     try: # runs until Ctrl+C interupts
