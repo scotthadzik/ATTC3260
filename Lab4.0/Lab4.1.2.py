@@ -9,7 +9,7 @@ redColorDefault   = colorOptions
 Red_Signal_Frequency   = 2000 # The frequency of the digital signal
 
 #Set the color value
-setRedColor   = 25 
+setRedColor = 25 
 
 #------------------SET THE DUTY CYCLE -----------------------------------------------------
 redColorOFFTime   = (setRedColor  / redColorDefault) * 100 # Calculate the off time by dividing the setColor by 256. 
