@@ -22,7 +22,7 @@ GPIO.output (PIN_R, GPIO.HIGH) # Turn off the LED
 PWM_R_Pin = GPIO.PWM(PIN_R, Red_Signal_Frequency)   # Set the pin to a pulse width modulation digital signal with a set frequency
 
 print ("Set R to " + str(setRedColor)  + 
-        ' With a duty cyle of ' + str(Red_Signal_Duty_Cycle)  + 
+        ' With a duty cycle of ' + str(Red_Signal_Duty_Cycle)  + 
         ' OFF time ' + str(redColorOFFTime))
 
 while True:
