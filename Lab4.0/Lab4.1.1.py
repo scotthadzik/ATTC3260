@@ -4,7 +4,7 @@ import time
 
 PIN_R = 11
 
-Red_Signal_Frequency = 2000 # The frequency of the digital signal
+Red_Signal_Frequency = 1000 # The frequency of the digital signal
 Red_Signal_Duty_Cycle = 50 # The duty cycle of the digital signal. This is the on-time
 
 GPIO.setmode(GPIO.BOARD) # Numbers GPIOs by physical location
