@@ -5,7 +5,7 @@ import time
 PIN_R = 11
 colorOptions = 256 # The number of colors available in an 8 bit number
 # ------------------SET THE FREQUENCY -----------------------------------------------------
-Red_Signal_Frequency   = 2000 # The frequency of the digital signal
+Red_Signal_Frequency   = 1000 # The frequency of the digital signal
 
 #Set the color value
 setRedColor = 25 
