@@ -28,7 +28,8 @@ def setTheColor():
 
 def setTheDutyCycle(): 
     global Red_Signal_Duty_Cycle
-    global redColorOFFTime  
+    global redColorOFFTime
+    global PWM_R_Pin  
     #------------------SET THE DUTY CYCLE -----------------------------------------------------
     redColorOFFTime   = (setRedColor  / colorOptions) * 100 # Calculate the off time by dividing the setColor by 256. 
     Red_Signal_Duty_Cycle   = 100 - redColorOFFTime   # The duty cycle of the digital signal. This is the on-time
