@@ -6,11 +6,12 @@ import time
 PIN_R = 11
 colorOptions = 256 # The number of colors available in an 8 bit number
 setRedColor = 256
+
 # ------------------SET THE FREQUENCY and Duty Cycle -----------------------------------------------------
 Red_Signal_Frequency   = 2000 # The frequency of the digital signal
 Red_Signal_Duty_Cycle = 100
 redColorOFFTime = 0
-PWM_R_Pin = GPIO.PWM(PIN_R, Red_Signal_Frequency)   # Set the pin to a pulse width modulation digital signal with a set frequency
+
 #------------------SET PIN to OUTPUT -----------------------------------------------------
 GPIO.setmode(GPIO.BOARD) # Numbers GPIOs by physical location
 GPIO.setup(PIN_R, GPIO.OUT) # Set the R pin to mode is output
