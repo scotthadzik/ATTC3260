@@ -36,7 +36,7 @@ def printInfo():
             ' OFF time ' + str(redColorOFFTime))
 setup()
 while True:
-    setTheColor()
+    setRedColor = int(input("What is the color value for red? (0 to 255) "))
     setTheDutyCycle()
     printInfo()
     try: # runs until Ctrl+C interupts
