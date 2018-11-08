@@ -20,6 +20,7 @@ def setup():
     GPIO.setup(PIN_R, GPIO.OUT) # Set the R pin to mode is output
     GPIO.output (PIN_R, GPIO.HIGH) # Turn off the LED
     PWM_R_Pin = GPIO.PWM(PIN_R, Red_Signal_Frequency)   # Set the pin to a pulse width modulation digital signal with a set frequency
+    PWM_R_Pin.start(Red_Signal_Duty_Cycle)
 
 #Set the color value
 def setTheColor():
