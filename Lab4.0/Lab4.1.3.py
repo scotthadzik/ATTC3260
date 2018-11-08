@@ -8,8 +8,7 @@ colorOptions = 256 # The number of colors available in an 8 bit number
 Red_Signal_Frequency   = 2000 # The frequency of the digital signal
 
 #Set the color value
-print ("What is the color value for red? (0 to 255) "
-setRedColor = input
+setRedColor = int(input("What is the color value for red? (0 to 255) "))
 
 #------------------SET THE DUTY CYCLE -----------------------------------------------------
 redColorOFFTime   = (setRedColor  / colorOptions) * 100 # Calculate the off time by dividing the setColor by 256. 
