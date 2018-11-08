@@ -37,7 +37,7 @@ while True:
     setTheDutyCycle()
     printInfo()
     try: # runs until Ctrl+C interupts
-        PWM_R_Pin.setTheDutyCycle(Red_Signal_Duty_Cycle)   # Start the pwm on the designated pin with a set duty cycle
+        PWM_R_Pin.ChangDutyCycle(Red_Signal_Duty_Cycle)   # Start the pwm on the designated pin with a set duty cycle
     except KeyboardInterrupt: # runs when Ctrl+C interupts
         break
 
