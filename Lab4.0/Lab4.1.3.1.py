@@ -23,10 +23,12 @@ def setup():
 
 #Set the color value
 def setTheColor():
+    global setRedColor
     setRedColor = int(input("What is the color value for red? (0 to 255) "))
 
 def setTheDutyCycle(): 
-    global Red_Signal_Duty_Cycle  
+    global Red_Signal_Duty_Cycle
+    global redColorOFFTime  
     #------------------SET THE DUTY CYCLE -----------------------------------------------------
     redColorOFFTime   = (setRedColor  / colorOptions) * 100 # Calculate the off time by dividing the setColor by 256. 
     Red_Signal_Duty_Cycle   = 100 - redColorOFFTime   # The duty cycle of the digital signal. This is the on-time
