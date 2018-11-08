@@ -32,6 +32,7 @@ def setTheDutyCycle():
     #------------------SET THE DUTY CYCLE -----------------------------------------------------
     redColorOFFTime   = (setRedColor  / colorOptions) * 100 # Calculate the off time by dividing the setColor by 256. 
     Red_Signal_Duty_Cycle   = 100 - redColorOFFTime   # The duty cycle of the digital signal. This is the on-time
+    PWM_R_Pin.ChangeDutyCycle(Red_Signal_Duty_Cycle)   # Start the pwm on the designated pin with a set duty cycle
 
 def printInfo():
         print ("Set R to " + str(setRedColor)  + 
@@ -39,11 +40,11 @@ def printInfo():
             ' OFF time ' + str(redColorOFFTime))
 setup()
 while True:
-    setRedColor = int(input("What is the color value for red? (0 to 255) "))
-    setTheDutyCycle()
-    printInfo()
+    
     try: # runs until Ctrl+C interupts
-        PWM_R_Pin.ChangeDutyCycle(Red_Signal_Duty_Cycle)   # Start the pwm on the designated pin with a set duty cycle
+        setRedColor = int(input("What is the color value for red? (0 to 255) "))
+        setTheDutyCycle()
+        printInfo()
     except KeyboardInterrupt: # runs when Ctrl+C interupts
         break
 
