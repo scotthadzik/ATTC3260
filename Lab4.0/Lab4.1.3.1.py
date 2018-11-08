@@ -15,6 +15,7 @@ PWM_R_Pin = GPIO.PWM(PIN_R, Red_Signal_Frequency)   # Set the pin to a pulse wid
 GPIO.setmode(GPIO.BOARD) # Numbers GPIOs by physical location
 GPIO.setup(PIN_R, GPIO.OUT) # Set the R pin to mode is output
 GPIO.output (PIN_R, GPIO.HIGH) # Turn off the LED
+PWM_R_Pin = GPIO.PWM(PIN_R, Red_Signal_Frequency)   # Set the pin to a pulse width modulation digital signal with a set frequency
 
 #Set the color value
 def setTheColor():
