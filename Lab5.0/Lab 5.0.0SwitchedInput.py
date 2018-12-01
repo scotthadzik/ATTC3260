@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import RPi.GPIO as GPIO
 
-ButtonInputPin = 7
+ButtonInputPin = 11
 
 def setup():
 	GPIO.setmode(GPIO.BOARD)       # Numbers GPIOs by physical location
