@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 import RPi.GPIO as GPIO
 
-ButtonInputPin = 11
+pullUpResistorPin = 11
+pullDownResistorPin = 13
 
 def setup():
-	GPIO.setmode(GPIO.BOARD)       # Numbers GPIOs by physical location
-	GPIO.setup(ButtonInputPin, GPIO.IN, pull_up_down=GPIO.PUD_UP)    # Set BtnPin's mode to input, and pull up to high level(3.3V)
-	GPIO.add_event_detect(ButtonInputPin, GPIO.BOTH, callback=detect, bouncetime=200)
+	GPIO.setmode(GPIO.BOARD)
+	GPIO.setup(pullUpResistorPin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+	GPIO.setup(pullDownResistorPin, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
 def detect(chn):
 	print('*   Button Pressed!   *')
