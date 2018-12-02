@@ -9,9 +9,10 @@ def setup():
 
 setup()
 while True:
-	print (GPIO.input(inputPin))
-except KeyboardInterrupt:  # When 'Ctrl+C' is pressed, the child program destroy() will be  executed.
-	break
+	try:
+		print (GPIO.input(inputPin))
+	except KeyboardInterrupt:  # When 'Ctrl+C' is pressed, the child program destroy() will be  executed.
+		break
 
 GPIO.cleanup()                     # Release resource
 
