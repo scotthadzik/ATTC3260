@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import RPi.GPIO as GPIO
+import time
 
 inputPin = 11
 
@@ -10,7 +11,12 @@ def setup():
 setup()
 while True:
 	try:
-		print (GPIO.input(inputPin))
+		pinState = GPIO.input(inputPin)
+		if pinState == True:
+			print('The pin is high')
+		elif pinState == False:
+			print('The pin is low')
+		time.sleep(5)
 	except KeyboardInterrupt:  # When 'Ctrl+C' is pressed, the child program destroy() will be  executed.
 		break
 
