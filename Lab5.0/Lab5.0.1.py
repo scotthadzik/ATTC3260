@@ -1,29 +1,27 @@
 #!/usr/bin/env python
 import RPi.GPIO as GPIO
+import time
 
-pullUpResistorPin = 11
-pullDownResistorPin = 13
+inputPin = 11
 
 def setup():
 	GPIO.setmode(GPIO.BOARD)
-	GPIO.setup(pullUpResistorPin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-	GPIO.setup(pullDownResistorPin, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
-	GPIO.add_event_detect(pullUpResistorPin, GPIO.BOTH, callback=pullUpSense, bouncetime=200)
-	GPIO.add_event_detect(pullDownResistorPin, GPIO.BOTH, callback=pullDownSense, bouncetime=200)
+	GPIO.setup(inputPin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+	GPIO.add_event_detect(pullUpResistorPin, GPIO.BOTH, callback=PinLow, bouncetime=200)
 
-def pullUpSense(chn):
-	print('*   Pull UP Sense   *')
-
-def pullDownSense(chn):
-	print('*   Pull DOWN Sense   *')
+def PinLow(chn):
+	print('.....The pin is LOW')
 
 setup()
 while True:
 	try:
-		pass
+		pinState = GPIO.input(inputPin)
+		if pinState == True:
+			print('The pin is high')
+		elif pinState == False:
+			print('The pin is low')
+		time.sleep(5)
 	except KeyboardInterrupt:  # When 'Ctrl+C' is pressed, the child program destroy() will be  executed.
 		break
 
 GPIO.cleanup()                     # Release resource
-
-
