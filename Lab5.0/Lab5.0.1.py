@@ -7,7 +7,7 @@ inputPin = 11
 def setup():
 	GPIO.setmode(GPIO.BOARD)
 	GPIO.setup(inputPin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-	GPIO.add_event_detect(pullUpResistorPin, GPIO.BOTH, callback=PinLow, bouncetime=200)
+	GPIO.add_event_detect(inputPin, GPIO.BOTH, callback=PinLow, bouncetime=200)
 
 def PinLow(chn):
 	print('.....The pin is LOW')
