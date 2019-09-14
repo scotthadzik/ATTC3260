@@ -16,8 +16,10 @@
 
 ## Enable Camera Interface
 BASHRC="/home/pi/.bashrc"
-echo "test" >> $BASHRC
-
+echo "" >> $BASHRC
+echo "alias python='/usr/bin/python3'" >> $BASHRC 
+echo "alias pip=pip3" >> $BASHRC
+echo "Modified .bashrc"
 
 
 echo "Install complete, rebooting."
