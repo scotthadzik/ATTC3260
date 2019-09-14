@@ -3,11 +3,9 @@
 # basic functions
 
 # Install packages
-#apt-get update
-#apt-get upgrade -y
+sudo apt update
+sudo apt upgrade -y
 
-#wget -o - https://packagecloud.io/headmelted/codebuilds/gpgkey| sudo apt-key add -
-#sudo apt-get install code-oss
 
 
 #apt-get install $PACKAGES -y
@@ -38,7 +36,7 @@ else
 fi
 
 sudo apt update
-sudo apt install code-oss
+sudo apt install code-oss -y
 
 echo "Install complete, rebooting."
-# reboot
+reboot
