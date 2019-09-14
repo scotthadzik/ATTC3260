@@ -25,6 +25,8 @@ else
 	echo "Modified .bashrc"
 fi
 
+
+sudo wget -qO - https://packagecloud.io/headmelted/codebuilds/gpgkey | sudo apt-key add -;
 SOURCES="/etc/apt/sources.list"
 
 if grep -Fq "deb https://packagecloud.io/headmelted/codebuilds/raspbian/ jessie main" $SOURCES
