@@ -33,7 +33,7 @@ if grep -Fq "deb https://packagecloud.io/headmelted/codebuilds/raspbian/ jessie 
 then
 	echo 'sources.list has already been modified'
 else
-	sudo bash -c 'echo "deb https://packagecloud.io/headmelted/codebuilds/raspbian/ jessie main" >> $SOURCES' 
+	sudo bash -c 'echo "deb https://packagecloud.io/headmelted/codebuilds/raspbian/ jessie main" >> /etc/apt/sources.list' 
 	echo "Modified sources.list"
 fi
 
