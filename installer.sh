@@ -17,7 +17,7 @@
 ## Enable Camera Interface
 BASHRC="/home/pi/.bashrc"
 
-if grep -Fq "alias python='/usr/bin/python3'" $CONFIG
+if grep -Fq "alias python='/usr/bin/python3'" $BASHRC
 then
 	echo '.bashrc has already been modified'
 else
