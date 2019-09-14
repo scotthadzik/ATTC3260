@@ -27,6 +27,15 @@ else
 	echo "Modified .bashrc"
 fi
 
+SOURCES = "/etc/apt/sources.list"
+if grep -Fq "deb https://packagecloud.io/headmelted/codebuilds/raspbian/ jessie main" $SOURCES
+then
+	echo 'sources.list has already been modified'
+else
+	echo "" >> $SOURCES
+	echo "deb https://packagecloud.io/headmelted/codebuilds/raspbian/ jessie main" >> $SOURCES 
+	echo "Modified sources.list"
+fi
 
 
 echo "Install complete, rebooting."
