@@ -25,7 +25,7 @@ else
 	echo "alias python='/usr/bin/python3'" >> $BASHRC 
 	echo "alias pip=pip3" >> $BASHRC
 	echo "Modified .bashrc"
-
+fi
 
 
 
