@@ -16,7 +16,7 @@
 
 ## Enable Camera Interface
 BASHRC="/home/pi/.bashrc"
-echo "test" >> BASHRC
+echo "test" >> $BASHRC
 
 
 
