@@ -37,6 +37,8 @@ else
 	echo "Modified sources.list"
 fi
 
+sudo apt update
+sudo apt install code-oss
 
 echo "Install complete, rebooting."
 # reboot
