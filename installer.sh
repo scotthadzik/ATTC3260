@@ -41,4 +41,4 @@ sudo apt update
 sudo apt install code-oss -y
 
 echo "Install complete, rebooting."
-reboot
+sudo reboot
