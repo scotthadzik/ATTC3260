@@ -1,15 +1,15 @@
 #!/usr/bin/env python
 import RPi.GPIO as GPIO
 
-pullUpResistorPin = 11
+pullDownResistorPin = 11
 
 def setup():
 	GPIO.setmode(GPIO.BOARD)
-	GPIO.setup(pullUpResistorPin, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
-	GPIO.add_event_detect(pullUpResistorPin, GPIO.BOTH, callback=pullDownSense, bouncetime=200)
+	GPIO.setup(pullDownResistorPin, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+	GPIO.add_event_detect(pullDownResistorPin, GPIO.BOTH, callback=pullDownSense, bouncetime=200)
 
 def pullDownSense(chn):
-	print('*   Button Pressed   *')
+	print('*   Button Released   *')
 
 setup()
 while True:
