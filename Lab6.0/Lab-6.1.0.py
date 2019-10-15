@@ -1,0 +1,21 @@
+#!/usr/bin/env python
+import RPi.GPIO as GPIO
+
+pullUpResistorPin = 11
+
+def setup():
+	GPIO.setmode(GPIO.BOARD)
+	GPIO.setup(pullUpResistorPin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+	GPIO.add_event_detect(pullUpResistorPin, GPIO.BOTH, callback=pullUpSense, bouncetime=200)
+
+def pullUpSense(chn):
+	print('*   Button Pressed   *')
+
+setup()
+while True:
+	try:
+		pass
+	except KeyboardInterrupt:  # When 'Ctrl+C' is pressed, the child program destroy() will be  executed.
+		break
+
+GPIO.cleanup()                     # Release resource
