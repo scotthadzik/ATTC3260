@@ -6,7 +6,7 @@ pullUpResistorPin = 11
 def setup():
 	GPIO.setmode(GPIO.BOARD)
 	GPIO.setup(pullUpResistorPin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-	GPIO.add_event_detect(pullUpResistorPin, GPIO.Falling, callback=pullUpSense, bouncetime=500)
+	GPIO.add_event_detect(pullUpResistorPin, GPIO.FALLING, callback=pullUpSense, bouncetime=500)
 
 def pullUpSense(chn):
 	print('*   Button Pressed   *')
