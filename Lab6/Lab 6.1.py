@@ -8,7 +8,7 @@ def setup():
 	GPIO.setup(pullDownResistorPin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 	GPIO.add_event_detect(pullDownResistorPin, GPIO.BOTH, callback=buttonPressedSense, bouncetime=500)
 
-def pullDownSense(chn):
+def buttonPressedSense(chn):
 	print('*   Button Pressed   *')
 
 setup()
