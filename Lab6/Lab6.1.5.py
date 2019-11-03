@@ -21,12 +21,10 @@ def LED(state):
 		print('*   Turn LED ON   *')
 		GPIO.output(PIN_R, GPIO.HIGH) # Turn on LED
 		LED_ON = True
-		break
-	if LED_ON == True: 	#	The button has been released
+	else: 	#	The button has been released LED_ON == True
 		print('*   Turn LED OFF   *')
 		GPIO.output(PIN_R, GPIO.LOW) # Turn off LED
 		LED_ON = False
-		break
 
 def buttonSense(channel):
 	print('*   Button Pressed   *')
