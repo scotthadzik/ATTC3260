@@ -16,12 +16,13 @@ def setup():
 	
 def buttonSense(channel):
 	print('*   Button Pressed   *')
-    print('The channel is:  ' + str(channel))
-    checkButtonState()
+	print('The channel is:  ' + str(channel))
 	GPIO.output(PIN_R, GPIO.HIGH)  # Set the R pin to High(3.3V) to turn on led
+	checkButtonState(GPIO.input(button))
+	
 
-def checkButtonState():
-    print('The state of the button is ' + str(GPIO.input(button))
+def checkButtonState(buttonState):
+	print('The state of the button is ' + buttonState)
 
 def loop():
 	while True:
