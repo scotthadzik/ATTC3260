@@ -20,7 +20,6 @@ def buttonSense(channel):
 	GPIO.output(PIN_R, GPIO.HIGH)  # Set the R pin to High(3.3V) to turn on led
 	checkButtonState(GPIO.input(button))
 	
-
 def checkButtonState(buttonState):
 	print('The state of the button is ' + str(buttonState))
 
