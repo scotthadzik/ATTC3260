@@ -9,7 +9,7 @@ def setup():
 	GPIO.setmode(GPIO.BOARD)
 
 	GPIO.setup(button, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-	GPIO.add_event_detect(button, GPIO.BOTH, callback=buttonSense, bouncetime=500)
+	GPIO.add_event_detect(button, GPIO.BOTH, callback=buttonSense, bouncetime=100)
 
 	GPIO.setup(PIN_R, GPIO.OUT)
 	GPIO.output(PIN_R, GPIO.LOW)
