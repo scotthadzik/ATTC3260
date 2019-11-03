@@ -22,7 +22,7 @@ def buttonSense(channel):
 	
 
 def checkButtonState(buttonState):
-	print('The state of the button is ' + buttonState)
+	print('The state of the button is ' + str(buttonState))
 
 def loop():
 	while True:
