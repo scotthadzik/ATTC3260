@@ -16,9 +16,9 @@ def setup():
 
 def LED (state):
     if state == 0:                  # if the state is low
-        GPIO.output(PIN_R, LOW)         # turn off LED
+        GPIO.output(PIN_R, GPIO.LOW)         # turn off LED
     if state == 1:                  #if the sate is high
-        GPIO.output(PIN_R, HIGH)        #Turn on LED
+        GPIO.output(PIN_R, GPIO.HIGH)        #Turn on LED
 
 def buttonSense(chn):
 	print('*   Button Pressed   *')

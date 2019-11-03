@@ -15,9 +15,9 @@ def setup():
 	GPIO.output(PIN_R, GPIO.LOW)
 	
 
-def buttonSense(state):
+def buttonSense(stateValue):
 	print('*   Button Pressed   *')
-	print(state)
+	print(str(stateValue))
 	GPIO.output(PIN_R, GPIO.HIGH)  # Set the R pin to High(3.3V) to turn on led
 
 def loop():
