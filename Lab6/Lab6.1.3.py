@@ -3,7 +3,6 @@ import RPi.GPIO as GPIO
 
 button = 11
 PIN_R = 12
-channelState = 0
 
 
 def setup():
@@ -14,9 +13,7 @@ def setup():
 
 	GPIO.setup(PIN_R, GPIO.OUT)
 	GPIO.output(PIN_R, GPIO.LOW)
-    checkButtonState()
 	
-
 def buttonSense(channel):
 	print('*   Button Pressed   *')
     print('The channel is:  ' + str(channel))
