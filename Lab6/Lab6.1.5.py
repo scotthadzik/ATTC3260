@@ -18,9 +18,11 @@ def setup():
 def LED(state):
 	global LED_ON
 	if LED_ON == False: #	The LED is off
+		print('*   Turn LED ON   *')
 		GPIO.output(PIN_R, GPIO.HIGH) # Turn on LED
 		LED_ON = True
 	if LED_ON == True: 	#	The button has been released
+		print('*   Turn LED OFF   *')
 		GPIO.output(PIN_R, GPIO.LOW) # Turn off LED
 		LED_ON = False
 
