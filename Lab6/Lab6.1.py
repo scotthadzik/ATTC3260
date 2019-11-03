@@ -11,11 +11,16 @@ def setup():
 def buttonSense(chn):
 	print('*   Button Pressed   *')
 
-setup()
-while True:
-	try:
+def loop():
+	while True:
 		pass
-	except KeyboardInterrupt:  # When 'Ctrl+C' is pressed, the child program destroy() will be  executed.
-		break
 
-GPIO.cleanup()                     # Release resource
+def destroy():
+	GPIO.cleanup()                     # Release resource
+
+if __name__ == '__main__':     # Program start from here
+	setup()
+	try:
+		loop()
+	except KeyboardInterrupt:  # When 'Ctrl+C' is pressed, the child program destroy() will be  executed.
+		destroy()
