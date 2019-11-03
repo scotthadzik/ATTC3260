@@ -1,28 +1,30 @@
 #!/usr/bin/env python
 import RPi.GPIO as GPIO
 
-pullUPResistorPin = 11
+button = 11
 PIN_R = 12
+channelState = 0
 
 
 def setup():
 	GPIO.setmode(GPIO.BOARD)
 
-	GPIO.setup(pullUPResistorPin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-	GPIO.add_event_detect(pullUPResistorPin, GPIO.BOTH, callback=buttonSense, bouncetime=500)
+	GPIO.setup(button, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+	GPIO.add_event_detect(button, GPIO.BOTH, callback=buttonSense, bouncetime=500)
 
 	GPIO.setup(PIN_R, GPIO.OUT)
 	GPIO.output(PIN_R, GPIO.LOW)
+    checkButtonState()
+	
 
-def LED (state):
-    if state == 0:                  # if the state is low
-        GPIO.output(PIN_R, GPIO.LOW)         # turn off LED
-    if state == 1:                  #if the sate is high
-        GPIO.output(PIN_R, GPIO.HIGH)        #Turn on LED
-
-def buttonSense(chn):
+def buttonSense(channel):
 	print('*   Button Pressed   *')
+    print('The channel is:  ' + str(channel))
+    checkButtonState()
 	GPIO.output(PIN_R, GPIO.HIGH)  # Set the R pin to High(3.3V) to turn on led
+
+def checkButtonState():
+    print('The state of the button is ' + str(GPIO.input(button))
 
 def loop():
 	while True:
