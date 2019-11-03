@@ -21,7 +21,7 @@ def buttonSense(chn):
 setup()
 
 def destroy():
-	GPIO.output(PIN_R, GPIO.LOW)
+	GPIO.output(PIN_R, GPIO.HIGH)
 	GPIO.cleanup()                     # Release resource
 
 while True:
