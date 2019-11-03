@@ -20,15 +20,10 @@ def buttonSense(chn):
 
 setup()
 
-def destroy():
-	
-	GPIO.output(PIN_R, GPIO.HIGH)
-	GPIO.cleanup()
-	print ('cleanup')                     # Release resource
-
 while True:
 	try:
 		pass
 	except KeyboardInterrupt:  # When 'Ctrl+C' is pressed, the child program destroy() will be  executed.
 		destroy()
-
+	finally:
+		GPIO.cleanup()
