@@ -18,11 +18,17 @@ def buttonSense(chn):
 	print('*   Button Pressed   *')
 	GPIO.output(PIN_R, GPIO.HIGH)  # Set the R pin to High(3.3V) to turn on led
 
-setup()
-
-while True:
-	try:
+def loop():
+	while True:
 		pass
+
+def destroy():
+	GPIO.cleanup()                     # Release resource
+
+if __name__ == '__main__':     # Program start from here
+	setup()
+	try:
+		loop()
 	except KeyboardInterrupt:  # When 'Ctrl+C' is pressed, the child program destroy() will be  executed.
-		GPIO.cleanup()
+		destroy()
 		
