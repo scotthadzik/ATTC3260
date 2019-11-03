@@ -12,6 +12,7 @@ def setup():
 	GPIO.add_event_detect(pullUPResistorPin, GPIO.BOTH, callback=buttonSense, bouncetime=500)
 
 	GPIO.setup(PIN_R, GPIO.OUT)
+	GPIO.output(PIN_R, GPIO.LOW)
 	
 
 def buttonSense(chn):
