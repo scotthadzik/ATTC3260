@@ -23,6 +23,8 @@ while True:
 	try:
 		pass
 	except KeyboardInterrupt:  # When 'Ctrl+C' is pressed, the child program destroy() will be  executed.
-		break
+		destroy()
 
-GPIO.cleanup()                     # Release resource
+def destroy():
+	GPIO.output(PIN_R, GPIO.LOW)
+	GPIO.cleanup()                     # Release resource
