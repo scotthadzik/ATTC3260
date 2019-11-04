@@ -4,7 +4,6 @@ import RPi.GPIO as GPIO
 button = 11
 PIN_R = 12
 
-
 def setup():
 	GPIO.setmode(GPIO.BOARD)
 

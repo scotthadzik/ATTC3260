@@ -5,7 +5,6 @@ button = 11
 PIN_R = 12
 LED_ON = False
 
-
 def setup():
 	GPIO.setmode(GPIO.BOARD)
 
