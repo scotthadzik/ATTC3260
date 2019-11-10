@@ -12,17 +12,20 @@ def setup():
 
 	GPIO.setup(PIN_R, GPIO.OUT)
 	GPIO.output(PIN_R, GPIO.LOW)
-
-def buttonSense(channel):
-	print('*   Button Pressed   *')
-	LED(GPIO.input(button))
-
+	
 def LED(state):
 	checkButtonState(state)
 	if state == 0:	#	The button has been pressed
 		GPIO.output(PIN_R, GPIO.HIGH) # Turn on LED
 	if state == 1: 	#	The button has been released
 		GPIO.output(PIN_R, GPIO.LOW) # Turn off LED
+
+def buttonSense(channel):
+	print('*   Button Pressed   *')
+	LED(GPIO.input(button))
+
+def checkButtonState(buttonState):
+	print('The state of the button is ' + str(buttonState))
 
 def loop():
 	while True:
