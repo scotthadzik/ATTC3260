@@ -50,7 +50,7 @@ def write(val):
 		# print temp to see on terminal else comment out
 		bus.write_byte_data(address, 0x40, temp)
 	except Exception as e:
-		print ("Error: Device address: 0x" +  address)
+		print ("Error: Device address: 0x" +  str(address))
 		print (e)
 
 if __name__ == "__main__":
