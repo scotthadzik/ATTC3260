@@ -5,9 +5,9 @@ def setup():
 	ADC.setup(0x48)
 
 def loop():
-	while True:
-		print ADC.read(0)
-		ADC.write(ADC.read(0))
+    while True:
+        print (ADC.read(0))
+        ADC.write(ADC.read(0))
 
 def destroy():
 	ADC.write(0)
