@@ -3,7 +3,7 @@ import RPi.GPIO as GPIO
 import time                    # import the library time
 import sys, termious, tty, os
 
-PIN_R = 12
+PIN_R = 15
 
 def setup():
     GPIO.setmode(GPIO.BOARD)       # Numbers GPIOs by physical location

@@ -3,7 +3,7 @@ import RPi.GPIO as GPIO
 
 HallPin = 11
 Gpin   = 13
-Rpin   = 12
+Rpin   = 15
 
 def setup():
 	GPIO.setmode(GPIO.BOARD)       # Numbers GPIOs by physical location

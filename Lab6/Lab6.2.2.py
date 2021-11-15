@@ -2,7 +2,7 @@
 import RPi.GPIO as GPIO
 
 button = 11
-PIN_R = 12
+PIN_R = 15
 LED_ON = False
 
 def setup():

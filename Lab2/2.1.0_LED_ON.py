@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import RPi.GPIO as GPIO
 
-PIN_R = 12
+PIN_R = 15
 
 GPIO.setmode(GPIO.BOARD)       # Numbers GPIOs by physical pin location
 GPIO.setup(PIN_R, GPIO.OUT)   # Set the physical pin 12 to mode is output
